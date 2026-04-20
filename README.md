@@ -1,0 +1,78 @@
+# TypeUI DESIGN.md Extractor (Chrome + Edge Extension)
+
+This Chromium extension extracts styles and information from any given site and generates a `DESIGN.md` or `SKILL.md` file that you can use with tools such as Google Stitch, Claude Code, Codex, and others to build websites with a given design system blueprint. The file is based on the open-source [TypeUI DESIGN.md](https://www.typeui.sh/design-md) format.
+
+<img width="599" height="592" alt="Screenshot 2026-04-16 at 21 27 09" src="https://github.com/user-attachments/assets/6ba14eac-17a1-4577-83f2-213fedb9d152" />
+
+## Getting started
+
+Load the extension in Chrome:
+
+1. Open `chrome://extensions`
+2. Enable **Developer mode**
+3. Click **Load unpacked**
+4. Select this project folder
+
+Load the extension in Microsoft Edge:
+
+1. Open `edge://extensions`
+2. Enable **Developer mode**
+3. Click **Load unpacked**
+4. Select this project folder
+
+## Curated design skills
+
+Check out curated design systems at [typeui.sh/design-skills](https://www.typeui.sh/design-skills).
+
+## Available actions
+
+| Action | Description |
+| --- | --- |
+| Auto-extract | Reads styles from the active tab (typography, colors, spacing, radius, shadows, motion). |
+| Generate `DESIGN.md` | Produces design-system documentation markdown from extracted signals. |
+| Generate `SKILL.md` | Produces agent-ready skill markdown from extracted signals. |
+| Refresh | Re-runs extraction for the current page state. |
+| Download | Saves generated output as `DESIGN.md` or `SKILL.md`. |
+| Explain (`?`) | Shows how the file was generated, with TypeUI reference. |
+
+## Generated file structure
+
+The generated markdown follows this structure:
+
+| Section | What it does |
+| --- | --- |
+| `Mission` | Defines the design-system objective for the extracted site. |
+| `Brand` | Captures product/brand context, URL, audience, and product surface. |
+| `Style Foundations` | Lists inferred visual tokens and foundations. |
+| `Accessibility` | Applies WCAG 2.2 AA requirements and interaction constraints. |
+| `Writing Tone` | Sets guidance tone for implementation-ready output. |
+| `Rules: Do` | Lists required implementation practices. |
+| `Rules: Don't` | Lists anti-patterns and prohibited behavior. |
+| `Guideline Authoring Workflow` | Defines ordered guideline authoring steps. |
+| `Required Output Structure` | Enforces consistent output sections. |
+| `Component Rule Expectations` | Defines required interaction/state details. |
+| `Quality Gates` | Adds testable quality and consistency checks. |
+
+## Local development
+
+Run tests locally:
+
+```bash
+node tests/run-tests.mjs
+```
+
+## Package for Microsoft Edge Add-ons
+
+Create a submission-ready zip package:
+
+```bash
+bash scripts/package-edge.sh
+```
+
+The script creates a versioned package in `dist/`, for example:
+
+`dist/design-md-extractor-edge-v0.1.0.zip`
+
+## License
+
+This project is open-source under the MIT License.
