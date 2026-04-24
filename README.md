@@ -2,7 +2,7 @@
 
 This Microsoft Edge add-on extracts styles and information from any given site and generates a `DESIGN.md` or `SKILL.md` file that you can use with tools such as Google Stitch, Claude Code, Codex, and others to build websites with a given design system blueprint. The file is based on the open-source [TypeUI DESIGN.md](https://www.typeui.sh/design-md) format.
 
-<img width="599" height="592" alt="Screenshot 2026-04-16 at 21 27 09" src="https://github.com/user-attachments/assets/6ba14eac-17a1-4577-83f2-213fedb9d152" />
+<img width="1200" height="630" alt="designmdedge" src="https://github.com/user-attachments/assets/fd5d8d39-af7e-4684-97d3-44f3c7347508" />
 
 ## Getting started
 
